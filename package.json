@@ -1,6 +1,6 @@
 {
   "name": "karma-hsp-preprocessor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "#space preprocessor for karma runner",
   "main": "index.js",
   "repository": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/PK1A/karma-hsp-preprocessor/issues"
   },
   "homepage": "https://github.com/PK1A/karma-hsp-preprocessor",
-  "dependencies": {
+  "peerDependencies": {
     "hashspace": "*"
   }
 }

@@ -1,5 +1,5 @@
 var createHspPreprocessor = function (args, config, logger, helper) {
-    var compiler = require('hsp').compiler;
+    var compiler = require('hashspace').compiler;
     var log = logger.create('preprocessor.hsp');
 
     return function (content, file, done) {
