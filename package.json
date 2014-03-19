@@ -1,6 +1,6 @@
 {
   "name": "karma-hsp-preprocessor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "#space preprocessor for karma runner",
   "main": "index.js",
   "repository": {
