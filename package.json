@@ -12,6 +12,6 @@
   },
   "homepage": "https://github.com/PK1A/karma-hsp-preprocessor",
   "dependencies": {
-    "hashspace": "0.0.1-SNAPSHOT"
+    "hashspace": "*"
   }
 }
