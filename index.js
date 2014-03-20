@@ -1,3 +1,5 @@
+var path = require('path');
+
 var createHspPreprocessor = function (args, config, logger, helper) {
     var compiler = require('hashspace').compiler;
     var log = logger.create('preprocessor.hsp');
@@ -9,6 +11,9 @@ var createHspPreprocessor = function (args, config, logger, helper) {
 
         //TODO: refactor as soon as https://github.com/ariatemplates/hashspace/issues/61 is fixed
         if (compileResult.errors.length  === 0) {
+            if (path.extname(file.path) === '.hsp') {
+                file.path = file.path + '.js';
+            }
             done(compileResult.code);
         } else {
             compileResult.errors.forEach(function(error){
