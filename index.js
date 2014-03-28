@@ -1,7 +1,13 @@
 var path = require('path');
 
 var createHspPreprocessor = function (args, config, logger, helper) {
-    var compiler = require('hashspace').compiler;
+
+    // Try to look up compiler from the local installation path in order to use the source
+    // of the compiler when testing hsp itself. It is a bit hackish but don't know of a
+    // better approach for now...
+    var localHspPath = path.normalize(__dirname + '/../../hsp/compiler/compiler.js');
+    var compiler = fs.existsSync(localHspPath) ? require(localHspPath) : require('hashspace').compiler;
+
     var log = logger.create('preprocessor.hsp');
 
     return function (content, file, done) {
