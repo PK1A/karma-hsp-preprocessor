@@ -1,3 +1,4 @@
+var fs = require('fs');
 var path = require('path');
 
 var createHspPreprocessor = function (args, config, logger, helper) {
